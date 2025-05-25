@@ -102,6 +102,8 @@ That's it! No database setup, no API keys, no complicated configuration.
 
 ## 📱 How to Use
 
+Click on "Use Sample Data" first, then:
+
 1. **Create a Campaign**: Start by creating your first campaign
 2. **Add Influencers**: Use the "Add New Influencer" button
 3. **Track Progress**: Update video statuses as work progresses
