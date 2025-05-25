@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { StatusType } from '../types/influencer';
 
 interface InlineEditProps {
   value: string | number;

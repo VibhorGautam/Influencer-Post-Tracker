@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Influencer, StatusType, TableSort, SortField, SortDirection, PlatformType } from '../types/influencer';
-import { formatNumber, calculateTotalViews } from '../utils/calculations';
+import { Influencer, StatusType, TableSort, SortField, SortDirection } from '../types/influencer';
+import { formatNumber } from '../utils/calculations';
 import { InstagramIcon, TikTokIcon, BothPlatformsIcon, ExternalLinkIcon, DeleteIcon, VideoIcon, ChevronUpIcon, ChevronDownIcon } from './Icons';
 import InlineEdit from './InlineEdit';
 import VideoDetails from './VideoDetails';
@@ -49,20 +49,7 @@ const InfluencerTable: React.FC<InfluencerTableProps> = ({
       <ChevronDownIcon size={14} />;
   };
 
-  const getStatusBadgeClass = (status: StatusType) => {
-    switch (status) {
-      case 'Posted':
-        return 'status-posted';
-      case 'Approve Needed':
-        return 'status-approve';
-      case 'Script Needed':
-        return 'status-script';
-      case 'Paid':
-        return 'status-paid';
-      default:
-        return 'bg-slate-100 text-slate-800';
-    }
-  };
+
 
   const getPlatformIcon = (platform: string) => {
     switch (platform) {
@@ -183,11 +170,6 @@ const InfluencerTable: React.FC<InfluencerTableProps> = ({
               { value: 'Approve Needed', label: 'Approve Needed' },
               { value: 'Script Needed', label: 'Script Needed' },
               { value: 'Paid', label: 'Paid' }
-            ];
-            const platformOptions = [
-              { value: 'Instagram', label: 'Instagram' },
-              { value: 'TikTok', label: 'TikTok' },
-              { value: 'Both', label: 'Both' }
             ];
 
             return (

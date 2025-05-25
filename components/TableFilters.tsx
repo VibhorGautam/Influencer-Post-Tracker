@@ -12,7 +12,7 @@ interface TableFiltersProps {
 const TableFiltersComponent: React.FC<TableFiltersProps> = ({ filters, onFiltersChange }) => {
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 
-  const updateFilter = (key: keyof TableFilters, value: any) => {
+  const updateFilter = (key: keyof TableFilters, value: string | number | undefined) => {
     onFiltersChange({
       ...filters,
       [key]: value

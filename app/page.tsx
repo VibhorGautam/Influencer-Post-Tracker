@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Influencer, StatusType, Campaign, TableFilters, TableSort } from '../types/influencer';
+import { Influencer, Campaign, TableFilters, TableSort } from '../types/influencer';
 import InfluencerForm from '../components/InfluencerForm';
 import InfluencerTable from '../components/InfluencerTable';
 import CampaignTotals from '../components/CampaignTotals';
-import StatusFilter from '../components/StatusFilter';
 import CampaignManager from '../components/CampaignManager';
 import TableFiltersComponent from '../components/TableFilters';
 import ConfirmDialog from '../components/ConfirmDialog';
