@@ -102,7 +102,7 @@ That's it! No database setup, no API keys, no complicated configuration.
 
 ## 📱 How to Use
 
-Click on "Use Sample Data" first, then:
+Click on "Load Sample Data" first, then:
 
 1. **Create a Campaign**: Start by creating your first campaign
 2. **Add Influencers**: Use the "Add New Influencer" button
@@ -112,10 +112,10 @@ Click on "Use Sample Data" first, then:
 
 ## ⏱ Development Time
 
-**Total Time Spent**: ~8 hours
+**Total Time Spent**: ~6 hours
 
 **Breakdown**:
-- Initial setup and basic features: 3 hours
+- Initial setup and basic features: 1 hour
 - Advanced filtering and sorting: 2 hours
 - Mobile responsiveness and design: 2 hours
 - Polish and additional features: 1 hour
