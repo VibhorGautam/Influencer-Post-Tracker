@@ -4,7 +4,7 @@ A modern, user-friendly web app to track influencer marketing campaigns. Built w
 
 ## 🚀 Live Demo
 
-**[View Live App on Vercel →](https://influencer-post-tracker-qc27.vercel.app/))**
+**[View Live App on Vercel →](https://influencer-post-tracker-1poe.vercel.app/)**
 
 ## 📋 What This App Does
 
