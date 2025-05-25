@@ -44,7 +44,7 @@ export const filterInfluencers = (influencers: Influencer[], filters: TableFilte
     // Date range filter
     if (filters.dateFrom || filters.dateTo) {
       const postedDates = influencer.postedOn.filter(date => date);
-      
+
       if (postedDates.length === 0) {
         // If no posted dates and date filter is active, exclude this influencer
         return false;
@@ -52,17 +52,17 @@ export const filterInfluencers = (influencers: Influencer[], filters: TableFilte
 
       const hasDateInRange = postedDates.some(dateStr => {
         const date = new Date(dateStr);
-        
+
         if (filters.dateFrom) {
           const fromDate = new Date(filters.dateFrom);
           if (date < fromDate) return false;
         }
-        
+
         if (filters.dateTo) {
           const toDate = new Date(filters.dateTo);
           if (date > toDate) return false;
         }
-        
+
         return true;
       });
 
@@ -103,7 +103,7 @@ export const sortInfluencers = (influencers: Influencer[], sort: TableSort): Inf
         break;
       case 'status':
         // Custom sort order for status
-        const statusOrder = { 'Script Needed': 0, 'Approve Needed': 1, 'Posted': 2 };
+        const statusOrder = { 'Script Needed': 0, 'Approve Needed': 1, 'Posted': 2, 'Paid': 3 };
         aValue = statusOrder[a.status];
         bValue = statusOrder[b.status];
         break;
@@ -128,8 +128,8 @@ export const sortInfluencers = (influencers: Influencer[], sort: TableSort): Inf
 };
 
 export const applyTableFiltersAndSort = (
-  influencers: Influencer[], 
-  filters: TableFilters, 
+  influencers: Influencer[],
+  filters: TableFilters,
   sort: TableSort
 ): Influencer[] => {
   const filtered = filterInfluencers(influencers, filters);

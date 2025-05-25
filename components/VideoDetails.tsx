@@ -1,6 +1,6 @@
 'use client';
 
-import { Influencer } from '../types/influencer';
+import { Influencer, StatusType } from '../types/influencer';
 import { VideoIcon, ExternalLinkIcon, CalendarIcon, LinkIcon, InstagramIcon, TikTokIcon } from './Icons';
 
 interface VideoDetailsProps {
