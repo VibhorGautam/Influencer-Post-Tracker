@@ -233,8 +233,13 @@ export const sampleInfluencers: Influencer[] = [
   }
 ];
 
-export const loadSampleData = () => {
+export const loadSampleData = (campaignId?: string) => {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('influencer-tracker-data', JSON.stringify(sampleInfluencers));
+    // If campaignId is provided, update all sample influencers to use that campaign ID
+    const influencersToSave = campaignId
+      ? sampleInfluencers.map(inf => ({ ...inf, campaignId }))
+      : sampleInfluencers;
+
+    localStorage.setItem('influencer-tracker-data', JSON.stringify(influencersToSave));
   }
 };

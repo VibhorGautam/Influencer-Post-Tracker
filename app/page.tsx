@@ -91,7 +91,7 @@ export default function Home() {
   const handleLoadSampleData = () => {
     if (!activeCampaign) return;
 
-    loadSampleData();
+    loadSampleData(activeCampaign.id);
     const campaignInfluencers = loadInfluencersForCampaign(activeCampaign.id);
     setInfluencers(campaignInfluencers);
   };
